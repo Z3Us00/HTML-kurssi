@@ -1,0 +1,54 @@
+@layer base, components, utils;
+
+@layer base{
+    body{ font-family: Arial, Helvetica, sans-serif; line-height: 1.5;}
+    h1{font-size: 30px;}
+    p{font-size: 20px;}
+    button{font-size: 15px;}
+}
+
+@layer components{
+    .btn{
+        background-color: #83b4ff;
+        border: 2px solid #1d009e;
+        color: #06295e;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .btn:hover{
+        background-color: #6c9adf;
+        transform: translateY(-1px);
+    }
+    .btn:focus-visible{
+        outline: 1px solid purple;
+    }
+
+    .card-wrapper{
+        background-color: #00fcb0ad;
+        border: 2px solid #034606;
+        color: #063804;
+        border-radius: 10px;
+        padding: 5px;
+        width: 450px;
+    }
+    :where(.card-wrapper .card-inner) h1{    
+        font-size: 28px;
+    }
+
+    .alert{
+        background-color: #f7f3f3;
+        border: 2px solid #000000;
+        width: 250px;
+        height: 40px;
+    }
+    .alert p{
+        color: red;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+@layer utils{
+    .border-color{border-color: red;}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="reunaCanvas" height="800" width="800" role="img" aria-label="Punainen pallo kimpoaa seinistä"></canvas>
+    <script>
+        const canvas = document.getElementById("reunaCanvas")
+        const ctx = canvas.getContext("2d");  
+
+        let x = 70;
+        let y = 70;
+        let vx = 5;
+        let vy = 5;
+
+        let säde = 40;
+
+
+
+        function animation() {
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+
+            x = x + vx;
+            y = y + vy;
+
+            if(x + säde > canvas.width || x - säde < 0){
+                vx = -vx;
+            }
+            if(y + säde > canvas.height || y - säde < 0){
+                vy = -vy;
+            }
+
+            ctx.beginPath();
+            ctx.arc(x , y, säde, 0, 2 * Math.PI);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            
+            //Reunat canvakselle
+            ctx.strokeStyle = "black";  
+            ctx.lineWidth = 2;  
+            ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+            requestAnimationFrame(animation);
+        }
+        animation();
+    </script>
+</body>
+</html>

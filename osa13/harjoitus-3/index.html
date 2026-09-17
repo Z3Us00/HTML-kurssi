@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggleFaq" onclick="toggleFaq()"> Avaa ohjeet</button>
+    <div id="faq" popover="manual">
+        <button id="closeFaq" onclick="closeFaq()">Sulje</button>
+        <details>
+        <summary>Mitä on HTML</summary>
+        <p>HTML on merkintäkieli, jota käytetään verkkosivujen rakentamiseen.</p>
+        </details>
+
+        <details>
+        <summary>Mitä on CSS</summary>
+        <p>CSS on kieli jolla asetetaan verkkosivujen ulkoinen asu</p>
+        </details>
+    </div>
+
+    <script>
+        const pop = document.getElementById('faq')
+
+        function toggleFaq(){
+            const btn = document.querySelector('#toggleFaq')
+
+            pop.togglePopover();
+        }
+        function closeFaq(){
+            const btn = document.querySelector('#closeFaq')
+            pop.hidePopover();
+        }
+    </script>
+</body>
+</html>

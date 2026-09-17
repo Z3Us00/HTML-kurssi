@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg id="japaninLippu" width="500" height="300" viewBox="0 0 500 300">
+        <title>Japanin lippu</title>
+        <desc>Japanin lippu beigellä taustalla. Circle elementti lipun keskikohtana, 1 Rect elementti- lipun pohjana ja toinen rect elementti lipun tausta koristeena</desc>
+        <g class="lippu" transform="translate(0,0)">
+            <rect class="tyyliTausta" x="5" y="40" width="180" height="120"/>
+            <rect class="lipunPohja" x="20" y="50" width="150" height="100"/>
+            <circle class="lipunKeski" cx="95" cy="100" r="22"/>
+        </g>
+
+        <title>Tieto Japanin lipusta</title>
+        <desc>Historiallista tieto japanin lipusta kuten käyttöönotto vuosi</desc>
+        <text x="10" y="180" font-size="20">Japanin lippu, otettu käyttöön vuonna 1999.</text>
+    </svg>
+
+    <style>
+        .lipunKeski{
+            fill: red;
+        }
+        .lipunPohja{
+            fill: white;
+            stroke:rgb(119, 54, 54);
+            stroke-width: 3;
+        }
+        .tyyliTausta{
+            fill:burlywood;
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html> 
+
+            <!-- <path d="M 10 60 L 10 10 L 60 10 L 60 60 Z" stroke-width="4" fill="white"/>
+            <circle cx="35" cy="35" r="10"/>    
+            
+            <script>
+        const svgElementti = document.getElementById("svgObjekti");
+        const ympyra = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        ympyra.setAttribute('cx', '70');  
+        ympyra.setAttribute('cy', '70');  
+        ympyra.setAttribute('r', '25');  
+        ympyra.setAttribute('fill', 'red');  
+        svgElementti.appendChild(ympyra);
+    </script>-->

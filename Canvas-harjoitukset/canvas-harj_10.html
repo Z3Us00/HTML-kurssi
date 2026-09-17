@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="tekstiCanvas" width="500" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById("tekstiCanvas")
+        const ctx = canvas.getContext("2d")
+
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "green";
+
+        ctx.fillText("Terve!", 100, 80)
+
+    </script> 
+</body>
+</html>

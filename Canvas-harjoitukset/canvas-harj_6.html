@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="suorakulmiotCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById("suorakulmiotCanvas")
+        const ctx = canvas.getContext("2d")
+        ctx.fillStyle = "green";
+        ctx.fillRect(30,30,80,60)
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "yellow";
+        ctx.strokeRect(150, 30, 80,60)
+    </script>
+</body>
+</html>

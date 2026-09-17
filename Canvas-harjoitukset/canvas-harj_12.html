@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="animaatioCanvas" width="500" height="500"></canvas>
+    <script>
+        const canvas = document.getElementById("animaatioCanvas");  
+        const ctx = canvas.getContext("2d"); 
+
+        let pos =  150;
+
+        function animation(){
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+
+            pos = pos + 2;
+
+            ctx.beginPath();
+            ctx.arc(pos, 150, 40, 0, 2 * Math.PI)
+            ctx.fillStyle = "red"
+            ctx.fill();
+
+            requestAnimationFrame(animation);
+        }
+
+        animation();
+    </script>
+</body>
+</html>

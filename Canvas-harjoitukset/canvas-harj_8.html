@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="polkuCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById("polkuCanvas")
+        const ctx = canvas.getContext("2d")
+
+        ctx.beginPath()
+
+        ctx.moveTo(100, 50)
+        ctx.lineTo(200, 150)
+        ctx.lineTo(100, 250)
+
+        ctx.closePath()
+        ctx.fillStyle = "red";
+        ctx.fill()
+    </script>
+</body>
+</html>

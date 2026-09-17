@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="vaistelyPeli"></canvas>
+    <script>
+        const canvas = document.getElementById("vaistelyPeli");  
+        const ctx = canvas.getContext("2d");
+
+        canvas.height = window.innerHeight * 0.95;
+        canvas.width = window.innerHeight * 0.95;
+        
+        ctx.strokeStyle = "black";
+        ctx.strokeRect( 0, 0, canvas.width, canvas.height);
+        //-----------------------------------------------------
+
+        let playerX = 300;
+        let playerY = 600;
+        let velocity = 10;
+
+        let jumpTrigger = true;
+        function animation(){
+            let limit = false;
+            let OutofBounds = 400;
+
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(playerX, playerY, 80, 80);
+
+            playerY = playerY - velocity;
+
+            if(!limit || playerY > OutofBounds){
+                limit = true;
+                if(playerY != 600){
+                    playerY = playerY + velocity;
+                }
+            }
+            
+            requestAnimationFrame(animation);
+        }
+        document.addEventListener("keydown", function(event){
+            if(event.code === "Space" || jumpTrigger){
+                jumpTrigger = false;
+                console.log("test")
+                playerY = playerY - velocity;
+            }
+            else{
+                if(playerY > 800)
+                playerY =+ velocity
+            }
+        })
+        animation();
+
+    </script>
+</body>
+</html>

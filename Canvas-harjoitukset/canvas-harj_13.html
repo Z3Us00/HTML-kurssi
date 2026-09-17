@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="tapahtumaCanvas" height="1000" width="800"></canvas>
+    <script>
+        const canvas = document.getElementById("tapahtumaCanvas")
+        const ctx = canvas.getContext("2d"); 
+
+        canvas.addEventListener("click", function(event){
+            const rect = canvas.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            ctx.beginPath();
+            ctx.arc(x, y, 30, 0, 2 * Math.PI)
+            ctx.fillStyle = "blue";
+            ctx.fill();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+input[type="email"]{
+    background-color: lightgray;
+}
+input[required]{
+    padding: 0.4rem;
+    border-color: rgb(8, 8, 49);
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+:focus-visible{
+    font-weight: 300;
+}
+
+:checked{
+    background-color: black;
+}
+
+p { color: black; }
+.card p { color: blue; }
+.card .lead { color: purple; }
+#intro .lead { color: green; }

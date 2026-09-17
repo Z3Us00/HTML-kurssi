@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="open" onclick="onOpen()">Poista</button>
+    <dialog id="confirm" value="test">
+        <form method="dialog">  
+            <p>Positetaanko elementti?</p>
+            <button value="cancel">Peruuta</button>
+            <button value="delete">Poista</button>
+        </form>
+    </dialog>
+
+    <script>
+    function onOpen(){   
+        const btn = document.querySelector('#open')
+        const dlg = document.querySelector('#confirm')
+
+        dlg.showModal(); 
+
+        console.log(dlg.returnValue)
+    }
+    </script>
+</body>
+</html>
