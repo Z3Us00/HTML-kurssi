@@ -1,0 +1,33 @@
+/* CSS-kokonaisharjoitus, osa 1 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;    
+    line-height: 1.5rem;
+    color:white;
+    background-color: black;
+}
+h1, h2, h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #a89c9c;
+
+    border: solid 1px yellow;
+    padding: 8px;
+}
+
+/*Halutaan samat property arvot myös korttien säiliöön kuten kortteihin*/
+.card-list, .card, .hero{
+    border: solid 2px white;
+    border-radius: 10px;
+    padding:10px;
+
+    background-color: rgb(24, 26, 26);
+}
+.card{
+    background-color: black;
+}
+
+.hero{
+    background-color: black;
+}
