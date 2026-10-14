@@ -1,10 +1,14 @@
 :root {
-  --text-body: 1rem;
+  --text-body: 1.rem;
+  --text-sm: 0.8rem;
   --text-h2: 2rem;
   --text-h3: 1.5rem;
   --leading-body: 1.65;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 h1{
     font-size: clamp(2rem, 3vw, 4rem);
 }
@@ -15,13 +19,43 @@ h3{
     font-size: var(--text-h3);
 }
 p{
-    font-size: var(--leading-body);
+    font-size: var(--text-body);
     line-height: var(--leading-body);
+}
+code{
+    font-size: var(--text-body);
+    font-weight: 600;
 }
 .news-container{
     max-width: 65ch;
 }
-small
+small{
+    font-size: var(--text-sm);
+    font-style: italic;
+}
+a{
+    font-size: var(--text-sm);
+    text-decoration: none;
+}
 
-code
+/* 
+Harjoitus 2
+pikavisa
+rem on fontti koon mukaan laskettu kun taas em on parentin fontti kokoon
+yksikötön line height skaalautuu perityn fonttikoon mukaan
+ */
+.card {
+  height: 100%; 
+}
+.card h2 {
+  font-size: 2rem; 
+}
+.card a {
+  text-decoration: none; 
+  color: rgb(65, 65, 201);
+  font-weight: 600;
+  &:hover{
+    text-decoration: underline;
+  }
+}
 
