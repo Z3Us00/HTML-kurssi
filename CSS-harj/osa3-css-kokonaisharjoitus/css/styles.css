@@ -1,0 +1,96 @@
+/* CSS-kokonaisharjoitus, osa 3 */
+
+/* Aloita CSS:n kirjoittaminen tämän kommentin alta. */
+@layer base, components, utils;
+
+@layer base{
+
+    *::before,*::after{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+        line-height: 1.2;
+        margin: 35px;
+    }
+    h1,h2,h3{
+        color: rgb(0, 0, 0);
+    }
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@layer components{
+    :where(.site-header nav .nav-list) a{
+        color: black;
+    }
+    main{
+        background-color: blueviolet;
+
+        width: 600;
+        padding: 3px 15px;
+        border: 2px solid purple;
+    }
+
+
+    .card-list{
+        display: block;
+        width: 100%;
+        max-width: 750px;
+    }
+    .card__badge{
+        display: inline-block;
+    }
+    .card{
+        background-color: rgb(155, 142, 143);
+        color: blueviolet;
+
+        padding: 20px;
+        margin: 30px;
+        border-radius: 15px;
+        overflow: auto;
+    }
+    .card:hover{
+        color: white;
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+
+    .hero{
+        h1 + p{
+            font-size: 21px;
+        }
+    }
+    .hero p{
+        color: white;
+    }
+
+    .help-button{
+        background-color: black;
+        color: white;
+        padding: 1px 8px;
+        margin: 6px 0;
+    }
+    .help-button:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+@layer utils{
+    .link-white{
+        color: white;
+    }
+    .link-black{
+        color: black;
+    }
+}

@@ -1,0 +1,40 @@
+:root
+{
+    --bg: #e7eaf6; 
+    --surface: #a2a8d3; 
+    --text: #38598b; 
+    --accent: #113f67;
+    --danger: #ff3700;
+}
+
+.card{
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--accent);
+    padding: 5px;
+}
+
+.btn{
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--accent);
+    margin: 5px 0;
+}
+
+.notif{
+    background-color: var(--bg);
+    color: var(--danger);
+    border: 2px solid var(--accent);
+    padding: 0 8px;
+}
+
+/* 
+Harjoitus 2
+*/
+.hero 
+{
+  background-image: linear-gradient(180deg,
+  rgba(0,0,0,0.5)10%, rgba(255,255,255, 1) 100%), url("../img/progrma.webp");
+    background-size: contain;
+    h1{color: white;}
+}

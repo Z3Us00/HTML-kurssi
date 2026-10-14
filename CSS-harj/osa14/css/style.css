@@ -1,0 +1,7 @@
+:root{
+    --text-color: ;
+    --background-color: ;
+    --border-color: ;
+
+    --h1-size: font-size: clamp(2rem, 3vw, 5rem);
+    --

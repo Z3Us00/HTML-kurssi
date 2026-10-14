@@ -1,0 +1,29 @@
+.card{
+    width: 24rem;
+    border: 2px solid blue;
+    border-radius: 1rem;
+    box-shadow:
+     0 4px 5px,
+    3px 0 5px;
+}
+
+.button{
+    background-color: blue;
+    color:black;
+    border: 2px solid transparent;
+    padding: 10px;
+    margin: 50px;
+}
+.button:hover {
+    border-color: rgb(255, 208, 0);
+}
+.button:focus-visible { 
+    outline: 2px solid yellow;
+}
+.button:active { 
+    box-shadow: inset 1px 2px 5px;
+    background-color: blue;
+}
+.button:disabled{
+    opacity: 0.6;
+}

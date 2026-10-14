@@ -1,0 +1,27 @@
+:root {
+  --text-body: 1rem;
+  --text-h2: 2rem;
+  --text-h3: 1.5rem;
+  --leading-body: 1.65;
+}
+
+h1{
+    font-size: clamp(2rem, 3vw, 4rem);
+}
+h2{
+    font-size: var(--text-h2);
+}
+h3{
+    font-size: var(--text-h3);
+}
+p{
+    font-size: var(--leading-body);
+    line-height: var(--leading-body);
+}
+.news-container{
+    max-width: 65ch;
+}
+small
+
+code
+

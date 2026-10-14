@@ -1,0 +1,29 @@
+.box{
+    display: inline;
+    width: 2rem;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+nav{
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: red;
+}
+nav p{
+    color: white;
+}
+
+/* 
+    display: block;
+    Elementit ovat päällekkäin
+    Block elementit ottavat itselleen koko rivin
+
+    display: inline;
+    Elementit ovat vierrekkäin ottavat sisällön suuruuden mukaan tilaa 
+    inline elementit jatkavat jonoa päin vastoin block elementeistä
+
+    display: inline-block;
+    Omaa molempia ominaisuuksia, block elementtien suuruuden ja inlinen asettelun
+*/

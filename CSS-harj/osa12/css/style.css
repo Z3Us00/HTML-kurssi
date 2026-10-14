@@ -1,0 +1,17 @@
+.card{
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 5px;
+    
+    transition: transform .2s ease-out,
+                background-color .2s ease;
+}
+.card:hover{
+    transform: translateY(-2px)
+                scale(1.01);
+    background-color: rgb(103, 175, 204);
+}
+.card:focus-visible{
+    outline: 2px solid blue;
+}

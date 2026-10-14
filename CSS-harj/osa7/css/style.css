@@ -1,0 +1,20 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    background-color: black;
+}
+.card{
+    background-color: white;
+}
+
+
+
+
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas: "header header" "main main" "footer footer";
+}
+main{grid-area: main, header, footer;}
