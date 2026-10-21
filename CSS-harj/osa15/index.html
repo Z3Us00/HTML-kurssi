@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="btn primary">Osta</button>
+    <button class="btn secondary">Lue lisää</button>
+
+    <section class="form-container">
+        <form action="">
+            <fieldset class="field-name">
+                <legend>Nimi</legend>
+                <label for="fname" class="name-label">Etunimi
+                    <input  id="fname" type="text" pattern="[A-Za-z]+" class="inp fname" placeholder="Eetu">
+                </label>
+
+                <label for="lname" class="lname-label">Sukunimi
+                    <input  id="lname" type="text" pattern="[A-Za-z]+" class="inp lname" placeholder="Aakkola">
+                </label>
+            </fieldset>
+
+            <fieldset class="field-contact">
+                <legend>Yhteystiedot</legend>
+                <label for="tel" class="tel-label">Tel</label>
+                <input  id="tel" type="tel" pattern="^\+?[0-9\s\-\(\)]{6,14}$" class="inp tel" placeholder="+358 xxxx xxx" required>
+
+                <label for="email" class="email-label">Email</label>
+                <input id="email" type="email" class="inp email" placeholder="example@gmail.com" required>
+
+                <label for="tos">Käyttäjä ehdot</label>
+                <input id="tos" type="checkbox" required>
+            </fieldset>
+
+            <button class="submit">Lähetä</button>  
+        </form>
+    </section>
+</body>
+</html> 

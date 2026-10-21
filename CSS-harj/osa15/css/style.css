@@ -1,0 +1,131 @@
+/* Harjoitus 1 */
+.btn{
+    width: 6rem;
+    padding: 0.5rem;
+
+    transition: transform 0.3s;
+    &:hover{
+        transform:translateY(-1px);
+    }
+    &:focus-visible{
+        outline: 2px solid black;
+        outline-offset: 1px;
+    }
+    &:disabled{
+        opacity: .5;
+        cursor:not-allowed
+    }
+}
+
+.primary{
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+    border: none;
+    &:active{
+        transform:scale(0.99);
+        background-color: darkblue;
+    }
+}
+
+.secondary{
+    background-color: white;
+    color:blue;
+    border-radius: 5px;
+    border: solid blue 1px;
+    &:active{
+        transform:scale(0.99);
+        background-color: #eeeaea;
+        color:darkblue;
+        border-color: darkblue;
+        
+    }
+}
+
+/* Harjoitus 2 */
+body{
+    font-size: 1rem;
+}
+fieldset{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.form-container{
+    width: calc(100%-2rem);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.inp{
+    border-radius: 100px;
+    border: 1px solid black;
+
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+
+    &:required{
+        border:left 2px solid yellow;
+    }
+    &:not(:placeholder-shown):not(:focus):valid{
+        border-color: limegreen;
+    }
+    &:not(:placeholder-shown):not(:focus):invalid{
+        border-color: red;
+    }
+        &:disabled{
+        opacity: .5;
+        cursor:not-allowed
+    }
+}
+.field-name{
+    display: flex;
+    gap:1rem;
+}
+.fname{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.lname{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.submit{
+    width: 100%;
+}
+legend{
+    font-weight: 600;
+    padding:1rem 0;
+}
+/* Checkbox style */
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #888;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+}
+input[type="checkbox"]::after {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  background: green;
+  transform: scale(0);
+}
+
+    input[type="checkbox"]:checked {
+  border-color: green;
+}
+
+input[type="checkbox"]:checked::after {
+  transform: scale(1);
+    border-color: green;
+}

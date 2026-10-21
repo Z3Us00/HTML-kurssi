@@ -1,7 +1,29 @@
 :root{
-    --text-color: ;
-    --background-color: ;
-    --border-color: ;
+    --text-color: #8b9abb ;
+    --background-color: #585fbe ;
+    --accent-color: #8f8f8f;
+    --border-color: #81b7ff;
 
     --h1-size: font-size: clamp(2rem, 3vw, 5rem);
-    --
+    --h2-size: font-size: clamp(1.5rem, 2.5vw, 4rem);
+    --body-size: font-size: clamp(1rem, 2vw, 3rem);
+
+    --radius-S: border-radius: 3px;
+    --radius-L: border-radius: 6px;
+
+    --margin-S: margin: 1rem;
+    --margin-M: margin: 4rem;
+    --margin-L: margin: 7rem;
+    --margin-XL: mragin: 10rem;
+
+    --padding-S: padding: 1rem;
+    --padding-M: padding: 4rem;
+    --padding-L: padding: 7rem;
+    --padding-XL: padding: 10rem;
+}
+[data-theme="dark"] {
+    --text-color: #8b9abb ;
+    --background-color: #000 ;
+    --accent-color: #272525;
+    --border-color: #4d71a1;
+}
