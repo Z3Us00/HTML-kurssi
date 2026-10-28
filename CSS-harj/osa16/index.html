@@ -9,33 +9,36 @@
 <body>
     <form action="">
         <fieldset>
-            <legend>Info</legend>
-            <label for="name" class="name-label">
-                Full Name
-                <input id="name" type="text" class="name-input">
-            </label>
-            
-            <label for="email" class="email-label">
-                Email
-                <input id="email" type="email" class="email-input" required>
-            </label>
-        </fieldset>
+            <legend>Account information</legend>
+            <div class="form-grid">
+                <label for="name" class="name-label">Full Name
+                    <input id="name" type="text" class="name-input" placeholder="Erkki Asola">
+                </label>
+                
+                <label for="email" class="email-label">Email
+                    <div class="input-wrapper">
+                        <input id="email" type="email" class="email-input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                        placeholder="Name@example.com" required aria-describedby="email-err">
+                        <p class="error-msg" id="email-err" aria-live="polite">Invalid email format!</p>
+                    </div>
+                </label>
 
-        <fieldset>
-            <legend>Password</legend>
-            <label for="password" class="pass-label">
-                Password
-                <input id="password" type="pass-input" class="pass-inp" required>
-            </label>
+                <label for="password" class="pass-label">Password
+                    <div class="password-wrapper">
+                        <input id="password" type="password" class="pass-inp" placeholder="Password" minlength="8" required
+                        aria-describedby="password-err">
+                        <p class="error-msg" id="password-err" aria-live="polite">Password too short! Must be atleast 8 characters.</p>                
+                    </div>
+                </label>
 
-            <label for="password" class="conbfirm-label">
-                Confirm Password
-                <input id="password" type="password" class="confirm-inp" required>
-            </label>
-
-            <label for="tos">Käyttäjä ehdot
-                <input id="tos" type="checkbox" required>
-            </label>
+                <label for="password" class="conbfirm-label">Confirm Password
+                    <input id="password" type="password" class="confirm-inp"placeholder="Confirm Password" required>
+                </label>
+                
+                <label for="tos">Käyttäjä ehdot
+                    <input id="tos" type="checkbox" required>
+                </label>
+            </div>
         </fieldset>
 
         <button class="submit">Lähetä</button>
