@@ -325,3 +325,6 @@ function palidrome(sana){
 }
 
 //S015.
+function nimittaja(luku1, luku2){
+    
+}

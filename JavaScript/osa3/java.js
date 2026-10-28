@@ -14,7 +14,6 @@
 // }
 // console.log(`Keski arvo on: ${(summa/pisteet.length).toFixed(1)}`)
 
-//Silmukkatehtävät, poislukien 3, 5, 7 - 9, 16
 //Harj 3.
 for(let i = 1; i <= 30; i++){
     if(i % 15 === 0) {
