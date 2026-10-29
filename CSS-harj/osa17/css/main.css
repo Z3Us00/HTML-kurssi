@@ -1,0 +1,167 @@
+/* Harj 1. Mikä CSS koodi pitää refaktoroida? */
+
+/* Harj 2. */
+:root{
+    --primary-bg: white;
+    --secondary-bg:black;
+    --accent-bg: grey;
+    --warn-bg: red;
+    
+    --primary-txt: white;
+    --secondary-txt:black;
+    --accent-txt: grey;
+
+    --mg-S: 0.2rem;
+    --mg-M: 0.5rem;
+    --mg-L: 1rem;
+    --mg-xl: 1.5rem;
+
+    --pd-S: 0.2rem;
+    --pd-M: 0.5rem;
+    --pd-L: 1rem;
+    --pd-xl: 1.5rem;
+
+    --br-S: 0.25rem;
+    --br-M: 0.75rem;
+
+
+    --ff-headings: 'Inter', system-ui, sans-serif;
+    --ff-body: 'Georgia', serif;
+    --ff-captions: 'JetBrains Mono', monospace;
+
+    --lineHeight-S: 1.2rem;
+    --lineHeight-default: 1.6rem;
+    --lineHeight-L: 2.4rem;
+
+    --fs-default: 1rem;
+    --fs-S: 0.8rem;
+    --fs-M: 1.2rem;
+    --fs-L: 1.5rem;
+    --fs-XL: 2rem;
+
+    --fw-reg: 300;
+    --fw-M: 500;
+    --fw-bold: 800;
+}
+@layer reset, base, component, utilities;
+
+@layer reset{
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+@layer base{
+    body{
+        font-family: var(--ff-body);
+        line-height: var(--lineHeight-default);
+        font-size: var(--fs-M);
+        font-weight: var(--fs-reg);
+        color: var(--primary-txt);
+        text-align: center;
+    }
+    h1{
+        font-family: var(--ff-headings);
+        font-size: var(--fs-L);
+        color: inherit;
+        text-align: inherit;
+    }
+    h2{
+        font-family: var(--ff-headings);
+        font-size: var(--fs-M);
+        color: inherit;
+        text-align: inherit;
+    }
+    p{
+        font-family: inherit;
+        font-size: var(--fs-L);
+        color: inherit;
+        text-align: inherit;
+    }
+}
+@layer components{
+    .btn{
+        align-items: center;
+        justify-content: center;
+        padding: var(--pd-S);
+        font-family: inherit;
+        font-size: var(--fs-M);
+        font-weight: var(--fw-reg);
+        border-radius: var(--br-S);
+        border: 1px solid var(--primary-bg);
+        --btn-bg: var(--secondary-bg);
+        --btn-txt: var(--primary-txt);
+        background-color: var(--btn-bg);
+        color: var(--btn-txt);
+        transition: 2s ease-in;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--accent-bg);
+        }
+        &:active{
+            transform: scale(0.98);
+        }
+        &:focus-visible{
+            outline: 2px solid var(--accent-bg);
+            outline-offset: 2px;
+        }
+        &:disabled{
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+    .ghost-btn{
+        --btn-bg: transparent;
+        --btn-txt: var(--primary-txt);
+        border-color: var(--primary-bg);
+    }
+    
+    .card{
+        padding: var(--pd-M);
+        font-family: inherit;
+        font-size: var(--fs-default);
+        font-weight: inherit;
+        border-radius: var(--br-M);
+        border: 1px solid var(--primary-bg);
+
+        --card-bg: var(--secondary-bg);
+        --card-txt: var(--primary-txt):
+        background-color: var(--card-bg);
+        color: var(--card-txt);
+    }
+    .ghost-card{
+        background-color: transparent;
+        color: var(--primary-txt);
+        border-color: var(--primary-bg);
+    }
+    .highlight-card{
+        --card-bg: var(--accent-bg);
+        --card-txt: var(--secondary-txt);
+    }
+
+    .alert{
+        padding: var(--pd-L);
+        font-family: var(--ff-captions);
+        font-size: var(--fs-S);
+        font-weight: var(--fw-reg);
+        border-radius: var(--br-S);
+        --alert-bg: var(--accent-bg):
+        --alert-txt: var(--secondary-txt);
+        background-color: var(--alert-bg);
+        color: var(--alert-txt);   
+    }
+    .warning-alert{
+        --alert-bg: var(--warn-bg);
+        --alert-txt: var(--primary-txt);
+    }
+}
+@layer utils{
+   .margintop-xl{
+    margin-top: 3rem;
+   }
+   .hidden{
+    display: none;
+   }
+}
