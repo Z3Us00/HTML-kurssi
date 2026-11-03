@@ -1,0 +1,104 @@
+@layer base{
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        background-color: var(--accent-bg);
+        font-family: var(--ff-body);
+        font-size: var(--fs-body);
+        line-height: 1.5rem;
+        font-weight: var(--fw-default);
+    }
+    header{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: var(--txt-color1);
+        background-color: var(--main-bg2);
+       
+        font-size: var(--fs-body);
+        padding:var(--spacing-md) var(--spacing-s);
+    }
+    h1{
+        font-family: var(--ff-heading);
+        font-size: var(--fs-xl);
+        padding-right: var(--spacing-md);
+    }
+    h2{
+        font-family: var(--ff-heading);
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-bold);
+        color: var(--txt-color1);
+        background-color: var(--main-bg2);
+        padding: var(--spacing-md);
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+    h3{
+        font-family: var(--ff-heading);
+        font-size: var(--fs-md);
+        font-weight: var(--fw-md);
+        color: var(--heading-txt);
+        padding: var(--spacing-s) 0;
+    }
+    p{
+        font-size: inherit;
+        font-family: inherit;
+        line-height: 1.5rem;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    button{
+        display: block;
+        font-size: inherit;
+    }
+    section{
+        display: block;
+        flex: wrap;
+        width: 100%;
+        min-width: 20rem;
+        max-width: 60rem;
+        text-align: left;
+    }
+    /* FORM TYYLITTELY */
+    fieldset{
+        display: block;
+        border: 1px solid var(--active-bg);
+        padding: var(--spacing-s);
+        border-radius: .5rem;    
+    }
+    legend{font-weight: var(--fw-bold);}
+    button, input, legend, label, textarea, select{
+    font: inherit;
+    color: inherit;
+    }
+    input, select, textarea{
+        border: 1px solid black;
+    }
+    input{
+        width: 100%;
+        display: inline-block;
+        padding: 0.3rem;
+        margin-bottom: var(--spacing-s);
+        &:disabled{ 
+            opacity: .4; 
+            cursor: not-allowed; 
+        }
+    }
+    select {
+        width: 100%;
+        padding: var(--spacing-form);
+    }
+    textarea{
+        width: 100%;
+        min-height: 4rem;
+        resize: vertical;
+        line-height: 1.5rem;
+    }
+}

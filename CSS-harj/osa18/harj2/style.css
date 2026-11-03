@@ -1,0 +1,87 @@
+/* Harj 1. */
+
+/* 
+Luotettavuus:
+1 - .card2 on epäselvä, nimesin kortin product-card:iksi
+
+Ennakoitavuus:
+2 - #app .page .content .card h2 specifity on korkea, lisätään titlelle oma class ja poistetaan turha specifity.
+
+3 - transition all, tulee olemaan kallis suorituskyvyn puolella ja on hankala rakentaa sen päälle,
+korjasin sen vaihtamalla sen transform:iin 
+Kestävyys:
+4 - Margin-top:in on px:inä, joka ei ole responsiivinen näytön koon suhteen, vaihdetaan se rem:iksi
+
+5 - height on 250px, määritetään se auto:ksi ja annetaan sisällön määrittää sen korkeus
+
+6 - width on myös px yksiköissä, muutan sen 100% jotta se täyttää parentin täydellä leveydellä
+ja lisätään max-width jotta se ei veny liian pitkäksi leveillä näytöillä
+
+7 - img width on 1200px, ei toimisi joustavasti kaikilla näytöillä, muutetaan se max-width:100% 
+jotta se ei veny omasta resoluutiosta ja lisätään height:auto säilyttääkseen alkuperäinen aspect ratio
+Saavutettavuus:
+8 - Button:in outline:none hävittää saavutettavuudetn, lisäsin simppelin outline:n jotta buttoniin voi focusoida.
+lisäsin myös :focus-visiblen, vaihto ehtoisesti outline: none:n voi vain poistaa
+*/
+.card-title-1 { margin-top: 1rem; }
+.product-card { width: 100%; max-width: 30rem; height: auto; }
+.button:focus-visible { outline: 1px solid black; transition: transform .2s ease-in; }
+.hero img { max-width: 100%; height: auto; }
+
+/* Harj 2. 
+ENNEN:
+(LCP)
+Your local LCP value of 1.33 s is good.
+LCP element p
+
+(CLS)
+2.10
+Your local CLS value of 2.10 is poor.
+
+(INP)
+2,144 ms
+Your local INP value of 2,144 ms is poor.
+
+JÄLKEEN:
+
+(LCP)
+Your local LCP value of 0.14 s is good.
+LCP element p
+
+(CLS)
+Your local CLS value of 0 is good.
+
+(INP)
+
+Your local INP value of 48 ms is good.
+*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 3rem;
+    padding: 5rem;
+    background-image: url('progrma.webp');
+}
+.card{
+    width: 100%;
+    max-width: 32rem;
+    padding:1rem;
+    border-radius: 1rem;
+
+    background-color: rgba(85, 66, 66, 0.3);
+    color: white;
+    backdrop-filter: blur(5px);
+
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 1);
+    transition: transform 0.2s ease;
+    &:hover{
+        transform: scaleX(1.2);
+    }
+}

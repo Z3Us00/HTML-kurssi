@@ -1,0 +1,30 @@
+:root {
+    --txt-color1: white;
+    --heading-txt: #0a0a0a;
+    --body-txt: #1a1919;
+    --accent-bg: #eedfdf;
+    --main-bg: white;
+    --main-bg2: #ff0000;
+    --active-bg: #7a141b;
+
+    --ff-heading: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    --ff-body: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    --ff-small: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+
+    --fs-xl: clamp(1.8rem, 3vw + 1rem, 3rem);
+    --fs-lg: clamp(1.5rem, 1vw + 0.75rem, 2.5rem);
+    --fs-md: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+    --fs-body: clamp(1rem, 0.5vw + 1rem, 1.25rem);
+    --fs-s: clamp(0.75rem, 0.5vw + 0.5rem, 1rem);
+
+    --fw-bold: 700;
+    --fw-md: 500;
+    --fw-default: 0;
+
+    --spacing-lg: clamp(2rem, 2.5vw, 2.5rem);
+    --spacing-md: clamp(1rem, 1vw + 1rem, 1.5rem);
+    --spacing-s: clamp(0.5rem, 1vw, 1rem);
+    --spacing-form: 0.3rem;
+
+    --radius: 0.5rem;
+}

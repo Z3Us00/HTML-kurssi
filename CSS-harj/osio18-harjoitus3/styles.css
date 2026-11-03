@@ -1,0 +1,76 @@
+/* TARKOITUKSELLA ONGELMALLINEN CSS. Korjaa viisi saavutettavuusongelmaa! */
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    font: 1rem/1.5 Arial, sans-serif; 
+    color: #333; 
+    background: #f6f8fc; 
+}
+header, footer { 
+    padding: clamp(1rem, 3vh, 5rem); 
+    text-align: center; 
+}
+.courses { 
+    display: flex; 
+    width: 100%;
+    max-width: 72rem;
+    gap: 1rem; 
+    margin: 1rem auto; 
+}
+.card { 
+    width: 100%;
+    max-width: 24rem;
+    padding: 1.4rem; 
+    border-radius: 1rem; 
+    background: white; 
+    box-shadow: 0 1rem 1.5rem #0002; 
+    transition: transform .5s ease; 
+}
+.card:hover { transform: translateY(-1rem) scale(1.03); }
+.muted { color: #65686d; }
+.details { 
+    margin: 1rem 0; 
+    color: #555; 
+}
+.button, button { 
+    display: inline-block; 
+    padding: 0.7rem 1rem; 
+    background: #4765b5; 
+    color: white; 
+    border: 0; 
+    border-radius: 0.5rem; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: all .5s ease; 
+}
+.button:hover, button:hover { 
+    transform: scale(1.08); 
+}
+
+.button:focus-visible, button:focus-visible, input:focus-visible{
+    outline: 2px solid #555;
+    outline-offset: 2px;
+}
+.ilmoittautuminen { 
+    width: 100%;
+    max-width: 30rem;
+    margin: 2rem auto; 
+    padding: 1.5rem; 
+    background: white; 
+    border-radius: 1rem; 
+}
+input { 
+    padding: 0.6rem; 
+    margin: 0.6rem; 
+}
+
+@media(prefers-reduced-motion: reduce){
+    .button:hover, button:hover{
+        transform: scale(1);
+        background-color: #263764;
+    }
+    .card:hover, .ilmoittautuminen:hover{
+        transform: translateY(0) scale(1);
+        background-color: aliceblue;
+    }
+}

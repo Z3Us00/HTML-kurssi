@@ -16,10 +16,21 @@
       </article>
       <p class="hint">Vinkki: tarkastele erityisesti ominaisuuksia <code>background-color</code>, <code>color</code>, <code>border-color</code>, <code>padding</code> ja <code>width</code>.</p>
     </section>
-    <section class="panel"><h2>2. Coverage</h2><p>Avaa DevTools → Ctrl/Cmd + Shift + P → kirjoita <strong>Show Coverage</strong> → valitse toiminto → paina latauksen uudelleenkäynnistyskuvaketta.</p><p>Selvitä, kuinka paljon <code>styles.css</code>-tiedostosta jää käyttämättä. Tiedostossa on tarkoituksella käyttämättömiä luokkia.</p><p class="hint">Coverage näyttää käyttämättömiä CSS-tavuja, ei suoraan käyttämättömien sääntöjen lukumäärää. Tulokset riippuvat sivun tilasta ja käytetyistä toiminnoista.</p></section>
-    <section class="panel"><h2>3. Performance</h2><p>Avaa DevTools → <strong>Performance</strong>. Käynnistä tallennus, paina yhtä painiketta, pysäytä tallennus ja vertaile tapahtumia.</p>
-      <div class="controls"><button id="layoutBtn">Muuta leveyttä (layout)</button><button id="paintBtn">Vaihda taustaväri (paint)</button><button id="transformBtn">Siirrä transformilla</button><button id="resetBtn" class="secondary">Palauta</button></div>
-      <div class="stage"><div id="liikkuva" class="liikkuva">Tutkittava laatikko</div></div>
+    <section class="panel">
+      <h2>2. Coverage</h2>
+      <p>Avaa DevTools → Ctrl/Cmd + Shift + P → kirjoita <strong>Show Coverage</strong> → valitse toiminto → paina latauksen uudelleenkäynnistyskuvaketta.</p><p>Selvitä, kuinka paljon <code>styles.css</code>-tiedostosta jää käyttämättä. Tiedostossa on tarkoituksella käyttämättömiä luokkia.</p><p class="hint">Coverage näyttää käyttämättömiä CSS-tavuja, ei suoraan käyttämättömien sääntöjen lukumäärää. Tulokset riippuvat sivun tilasta ja käytetyistä toiminnoista.</p></section>
+    <section class="panel">
+      <h2>3. Performance</h2>
+      <p>Avaa DevTools → <strong>Performance</strong>. Käynnistä tallennus, paina yhtä painiketta, pysäytä tallennus ja vertaile tapahtumia.</p>
+      <div class="controls">
+        <button id="layoutBtn">Muuta leveyttä (layout)</button>
+        <button id="paintBtn">Vaihda taustaväri (paint)</button>
+        <button id="transformBtn">Siirrä transformilla</button>
+        <button id="resetBtn" class="secondary">Palauta</button>
+      </div>
+      <div class="stage">
+        <div id="liikkuva" class="liikkuva">Tutkittava laatikko</div>
+      </div>
       <p id="tila" role="status">Valitse toiminto ja tarkastele selaimen työtä.</p>
       <p class="hint">Huomaa: transform-animaatio voidaan usein toteuttaa compositing-vaiheessa ilman jokaisen ruudun layout- tai paint-työtä. Toteutus riippuu selaimesta ja tilanteesta.</p>
     </section>

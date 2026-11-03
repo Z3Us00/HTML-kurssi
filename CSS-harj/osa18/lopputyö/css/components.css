@@ -1,0 +1,113 @@
+@layer components{
+    .scrollmenu{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type: none;
+    }
+    .scrollmenu li:not(:last-child)::after{
+        content: "|";
+        padding: 0 var(--spacing-s);
+    }
+    .sect{
+        background-color: var(--main-bg);
+        color: var(--body-txt);
+        margin: var(--spacing-s);
+        border-radius: var(--radius);
+    }
+    .btn{
+        background-color: var(--main-bg2);
+        color: var(--txt-color1);
+        border:none;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        transition: transform 0.2s ease-in;
+        cursor: pointer;
+        &:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        &:focus-visible{
+            outline: 3px solid var(--active-bg);
+            outline-offset: 1px;
+        }
+        &:hover{
+            transform: translateY(-1px) scale(1.01);
+        }
+        &:active{
+            background-color: var(--active-bg);
+            transform: translateY(1px);        
+        }
+    }
+    .contact-field, .carinfo-field{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        >:last-child:nth-child(odd) {
+            grid-column: 1/-1;
+        }
+    }
+    .info-wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .content-wrap{
+        padding: var(--spacing-md);
+    }
+    .error-msg{
+        display: none;
+        top: 80%;       
+        position: absolute;
+        white-space: nowrap;
+        color: red;
+        font-family: var(--body-txt);
+        font-size: var(--fs-s);
+        }
+    .input-field{
+        position: relative;
+    }
+    .email-field .error-msg{
+        display: block;
+    }
+    @media(prefers-reduced-motion: reduce){
+        .btn{
+            &:hover{
+                transform: none;
+            }
+            &:active{
+                background-color: var(--active-bg);
+            }
+        }
+    }
+    @media(max-width: 48em){
+        /* Navista tulee scrollattava kun sisältö menee näytön ulkopuolelle */
+        .navbar{
+            scrollbar-width: thin;
+            overflow-y: hidden;
+            padding: var(--spacing-s);}
+        .scrollmenu{
+            overflow: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+        }
+        .scrollmenu a{
+            display: inline-block;
+            text-align: center;
+        }
+        /* Formi muuttuu gridiksi mobiililla */
+        fieldset{
+            display: grid;
+            padding: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-field, .carinfo-field{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+            /* Viimeinen lapsi jos pariton ottaa koko leveyden */
+            >:last-child{
+                grid-column: 1/-1;
+            }
+        }
+    }
+}
