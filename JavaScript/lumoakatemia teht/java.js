@@ -328,3 +328,6 @@ function palidrome(sana){
 function nimittaja(luku1, luku2){
     
 }
+
+
+// T01.
