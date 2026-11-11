@@ -1,3 +1,4 @@
+//Hark 1.
 const opiskelija ={
     nimi: 'Aino',
     ikä: '20',
@@ -10,6 +11,9 @@ const opiskelija ={
 opiskelija.ikä = '21'
 opiskelija.pisteet = '999'
 
+
+
+//Harj 2.
 const tuoteRekisteri = [
     {id: 1, nimi: 'Tietokone', hinta: 850, saldo: 0},
     {id: 2, nimi: 'Näyttö', hinta: 350, saldo: 2},
@@ -21,11 +25,13 @@ console.log(etsiID(2));
 console.log(etsiID(99));
 
 
-const päivitetty = tuoteRekisteri.map(t => t.id === 2 ? {...t, hinta: 20} : t)
-.filter(t => t.saldo > 0);
+const päivitetty = tuoteRekisteri
+    .map(t => t.id === 2 ? {...t, hinta: 20} : t)
+    .filter(t => t.saldo > 0);
 
 console.log(päivitetty);
 console.log(tuoteRekisteri);
+
 
 function etsiID(id){
     const id_ = tuoteRekisteri.find(t => t.id === id);    
@@ -35,3 +41,21 @@ function etsiID(id){
     //Ilmoitetaan jos undefined
     return 'Tuotetta ei löydy rekisteristä.';
 }
+
+
+//Harj 3.
+const asetukset = { id: 1, teema: 'dark', kieli: 'fi' };
+
+const { teema, kieli,
+    fonttikoko = 16
+} = asetukset;
+
+const{ id, ...loput} = asetukset;
+
+console.log(destruct(asetukset))
+
+function destruct(obj){
+    const obj_keys = Object.keys(obj); 
+    
+    return obj_keys;
+} 
