@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <form id="lomake">
+        <label for="name">Käyttäjänimi</label>
+        <input type="text" id="name" name="user" minlength="2" maxlength="20"
+        required aria-describedby="email-error">
+
+        <label for="email">Sähköposti</label>
+        <input type="email" id="email" name="email" minlength="5" maxlength="30"
+        required>
+
+        <label for="pass">Salasana</label>
+        <input type="password" id="pass" name="pass" minlength="6"  required>
+
+        <label for="vahvista">Confirm password</label>
+        <input type="password" id="vahvista" name="vahvista" required aria-describedby="virheViesti">
+        <p id="virheViesti"></p>
+        <label for="check">Käyttäjä ehdot</label>
+        <input type="checkbox" id="check" name="check" required>
+
+        <button type="submit" id="submit">Lähetä</button>
+    </form>
+
+    <!-- Tehtävä 3. -->
+    <form id="yhteydenotto">
+        <select name="valinta" id="subject">
+            <option value="Eläimet">Eläimet</option>
+            <option value="Autot">Autot</option>
+            <option value="Urheilu">Urheilu</option>
+            <option value="Talous">Talous</option>
+        </select>
+
+        <textarea name="feedback" id="feedback" placeholder="Palaute..."></textarea>
+
+        <fieldset>
+            <legend>Arvosana
+            </legend>
+            <input type="radio" id="hylatty" name="arvosana" value="4" checked>
+            <label for="posti">4</label>
+    
+            <input type="radio" id="keski" name="arvosana" value="5-7">
+            <label for="">5-7</label>
+    
+            <input type="radio" id="paras" name="arvosana" value="8-10">
+            <label for="">8-10</label>
+        </fieldset>
+
+        <label for="lupa">Yhteenotto lupa</label>
+        <input type="checkbox" id="lupa" name="lupa" required>
+    </form>
+    <button id="Lähetä">Lähetä</button>
+    <style>
+        .valid{
+            color: green;
+        }
+        .invalid{
+            color: red;
+        }
+        #virheViesti{
+            position: absolute;
+            top: 16.3%;
+        }
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        input{
+            width: 15rem;
+            margin-bottom: 1.25rem;
+        }
+        button{
+            width: 15rem;
+        }
+    </style>
+    <style>
+        #yhteenotto{
+            display: block;
+            margin: 1rem;
+        }
+        fieldset{
+            width: 13.5rem;
+            display: block;
+        }
+        textarea, select{
+            margin:1rem 0;
+            width: 15rem;
+        }
+        input[type="radio"]{
+            width: auto;
+        }
+        label{
+            width: max-content;
+        }
+    </style>
+</body>
+</html>
