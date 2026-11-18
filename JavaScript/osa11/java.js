@@ -36,12 +36,24 @@ function passwordMatch() {
 
 //teht 3.
 
-const yhteenotto = document.querySelector('#yhteydenotto');
-const subject = document.querySelector('#subject');
+const yhteydenotto = document.querySelector('#yhteydenotto');
+const subject = document.querySelector('select:has(option:checked)');
 const radio = document.querySelector('input[type="radio"]:checked');
 const lupa = document.querySelector('#lupa');
+const yhteenveto = document.querySelector('#yhteenveto');
 
-yhteenotto.addEventListener('submit', (event) =>{
+yhteydenotto.addEventListener('submit', (event) =>{
     event.preventDefault();
+    const data = new FormData(yhteydenotto);
+    const aihe = data.get("valinta");
+    const feedback = data.get("feedback");
+    const arvio = data.get("arvosana");
+    const lupa = data.get("lupa");
 
+    yhteenveto.innerHTML =
+    `<p>Aihe: ${aihe}</p>
+    <p>Feedback: ${feedback}</p>
+    <p>Arvosana: ${arvio}</p>
+    <p>Yhteenotto lupa: ${lupa}</p>`;
 });
+

@@ -1,0 +1,15 @@
+h1, p{
+    text-align: center;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+article{
+    background-color: aliceblue;
+    min-width: 15rem;
+    align-items: center;
+}
